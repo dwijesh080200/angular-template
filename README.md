@@ -1,59 +1,93 @@
-# AngularTemplate
+# angular-template
+Angular template with clean structure and reusable components \
+\
+Example of structure \
+To note below is just an example, code may not be same
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
-
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+~~~~
+src/
+└── app/
+    ├── core/                                # singleton, app-wide logic
+    │   ├── services/
+    │   │   ├── api.service.ts
+    │   │   ├── auth.service.ts
+    │   │   └── storage.service.ts
+    │   ├── interceptors/
+    │   │   └── http.interceptor.ts
+    │   ├── guards/
+    │   │   └── auth.guard.ts
+    │   ├── models/
+    │   └── core.module.ts
+    │
+    ├── shared/                              # reusable, no business logic
+    │   ├── components/
+    │   │   ├── button/
+    │   │   ├── loader/
+    │   │   └── dialogs/
+    │   │       ├── confirm-dialog/
+    │   │       │   ├── confirm-dialog.component.ts
+    │   │       │   ├── confirm-dialog.component.html
+    │   │       │   └── confirm-dialog.component.scss
+    │   │       │
+    │   │       ├── alert-dialog/
+    │   │       └── base-dialog/              # optional wrapper layout
+    │   │
+    │   ├── directives/
+    │   ├── pipes/
+    │   ├── models/
+    │   ├── utils/
+    │   └── shared.module.ts
+    │
+    ├── features/                            # business domains
+    │   ├── auth/
+    │   │   ├── pages/
+    │   │   │   ├── login/
+    │   │   │   └── register/
+    │   │   ├── components/
+    │   │   ├── services/
+    │   │   ├── models/
+    │   │   ├── dialogs/                     # feature-specific dialogs
+    │   │   │   └── forgot-password-dialog/
+    │   │   ├── auth-routing.module.ts
+    │   │   └── auth.module.ts
+    │   │
+    │   ├── user/
+    │   │   ├── pages/
+    │   │   │   ├── user-list/
+    │   │   │   └── user-detail/
+    │   │   ├── components/
+    │   │   ├── services/
+    │   │   ├── models/
+    │   │   ├── dialogs/
+    │   │   │   ├── user-edit-dialog/
+    │   │   │   └── user-delete-dialog/
+    │   │   ├── user-routing.module.ts
+    │   │   └── user.module.ts
+    │   │
+    │   ├── dashboard/
+    │   │   ├── pages/
+    │   │   ├── components/
+    │   │   ├── services/
+    │   │   ├── models/
+    │   │   ├── dashboard-routing.module.ts
+    │   │   └── dashboard.module.ts
+    │   │
+    │   └── settings/
+    │       ├── pages/
+    │       ├── components/
+    │       ├── services/
+    │       ├── models/
+    │       ├── dialogs/
+    │       ├── settings-routing.module.ts
+    │       └── settings.module.ts
+    │
+    ├── layout/                              # app shell
+    │   ├── header/
+    │   ├── sidebar/
+    │   ├── footer/
+    │   └── layout.component.ts
+    │
+    ├── app-routing.module.ts                # lazy loading entry
+    ├── app.component.ts
+    └── app.module.ts
+~~~~
