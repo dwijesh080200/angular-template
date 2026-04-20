@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  margin: 0; /* This removes the scrollbar trigger */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Optional: Ensure everything uses border-box so padding doesn't add width */
+*, *:before, *:after {
+  box-sizing: inherit;
+}

@@ -1,0 +1,36 @@
+.google-banner {
+  /* Google Dark Theme Palette */
+  background-color: #202124 !important;
+  color: #e8eaed !important;
+  height: 64px;
+  border-bottom: 1px solid #3c4043;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+}
+
+.banner-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* Applying the Google Typography */
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400; /* Use 400 for a clean, Google Cloud look */
+  font-size: 22px;
+  letter-spacing: -0.2px;
+}
+
+.logo-section mat-icon {
+  color: #8ab4f8; /* Soft blue icon */
+}
+
+/* Ensure material icons inside the toolbar are aligned correctly */
+.mat-icon {
+  vertical-align: middle;
+}

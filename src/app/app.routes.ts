@@ -1,3 +1,15 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./features/dashboard/dashboard-module').then((m) => m.DashboardModule),
+  },
+    {
+    path: 'user',
+    loadChildren: () =>
+      import('./features/user/user-module').then((m) => m.UserModule),
+  },
+];

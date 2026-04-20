@@ -1,0 +1,19 @@
+main {
+  padding: 20px;
+  min-height: calc(100vh - 64px); /* Subtracts banner height */
+  background-color: #fafafa;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 64px);
+  overflow: hidden;
+}
+
+.content-area {
+  flex: 1;
+  overflow-y: auto; /* Content scrolls, menu stays static */
+  background-color: #ffffff; 
+  padding: 24px;
+}
