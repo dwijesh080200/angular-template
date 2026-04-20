@@ -1,1 +1,15 @@
-<p>dashboard-clock works!</p>
+<div class="clock-container" *ngIf="time$ | async as T">
+  <div class="time-row">
+    <span class="main-time">
+      {{ T | date:'HH:mm' }}
+    </span>
+    <span class="seconds">
+      {{ T | date:'ss' }}
+    </span>
+  </div>
+  
+  <div class="date-row">
+    <span class="day-name">{{ T | date:'EEEE' }}</span>,
+    <span class="full-date">{{ T | date:'MMMM d, y' }}</span>
+  </div>
+</div>

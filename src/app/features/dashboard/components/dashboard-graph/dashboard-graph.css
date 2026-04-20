@@ -1,0 +1,28 @@
+.charts-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Stacks on small screens */
+}
+
+.chart-card {
+  flex: 1;
+  min-width: 300px;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+}
+
+.canvas-container {
+  display: block;
+  height: 300px; /* Fixed height for consistency */
+  width: 100%;
+  margin-top: 16px;
+}
+
+mat-card-title {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #202124;
+}
