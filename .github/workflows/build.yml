@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-    NODE_ENV: 24
+  NODE_VERSION: 24
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${ { matrix.node-version } }
+          node-version: ${{ env.NODE_VERSION }}
           cache: npm
 
       - name: Install dependencies
