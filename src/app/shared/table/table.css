@@ -1,0 +1,22 @@
+.table-container {
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.scroll-viewport {
+  overflow: auto; /* Enables scrolling if height is constrained */
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.2rem;
+  color: #202124;
+}
